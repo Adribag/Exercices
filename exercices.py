@@ -34,7 +34,7 @@ def remStr(p):
             c+=1
     
     while find:
-
+        
 
 
 
