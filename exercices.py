@@ -46,9 +46,31 @@ listA = ["1","2","3","4","5"]
 listB = ["1","3","5","7","9"]
 listC = ["0","2","4","6","8"]
 
-def trList(la,lb):
+def trList(la,lb,lc):
+    tb = 0
+    tc = 0
+    tbc = 0
     for a in range (len(la)):
-        
-            
+        for b in range(len(lb)):
+            if(la[a] == lb[b]):
+                tb += 1
+        for c in range(len(lc)):
+            if(la[a] == lc[c]):
+                tc += 1
+    for e in range(len(lb)):
+        if(lb[e] == lc[c]):
+            tbc += 1
+    
+    l = [tb,tc,tbc]
+    m = max(l)   
+    for h in range(len(l)):
+        if(l[h] == m):
+            i = l.index(l[h])
+            if(i == 0):
+                print(f"Liste A et B sont les plus proches avec {l[h]} éléments en commun")
+            elif(i == 1):
+                print(f"Liste A et C sont les plus proches avec {l[h]} éléments en commun")
+            else:
+                print(f"Liste B est C sont les plus proches avec {l[h]} éléments en commun")
 
-trList(listA,listB)
+trList(listA,listB,listC)
